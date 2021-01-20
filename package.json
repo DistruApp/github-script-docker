@@ -1,0 +1,10 @@
+{
+  "name": "github-script",
+  "version": "0.1.0",
+  "main": "src/index.mjs",
+  "bin": "src/index.mjs",
+  "dependencies": {
+    "@distru/github": "file:modules/github",
+    "@distru/exec": "file:modules/exec"
+  }
+}

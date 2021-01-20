@@ -1,0 +1,6 @@
+{
+  "name": "@distru/exec",
+  "version": "0.1.0",
+  "main": "src/index.mjs",
+  "dependencies": {}
+}
