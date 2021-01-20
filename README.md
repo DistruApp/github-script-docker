@@ -1,4 +1,4 @@
-# octokit-docker
+# github-script-docker
 
 This repository defines a container image which can be used to run arbitrary Node.js scripts
 in response to GitHub events. It provides an authenticated, read-to-use Octokit instance, as
@@ -78,16 +78,29 @@ context is bound to the script:
       payload: object
       # the GitHub event name, e.g. 'pull_request', from GITHUB_EVENT_NAME
       eventName: string
-      # the GitHub event action, e.g. 'opened', from GITHUB_ACTION
+      # the GitHub event action, e.g. 'opened'
       action: string
-      # the SHA hash of the commit referenced by the event, from GITHUB_SHA
+      # the SHA hash of the commit referenced by the event
       sha: string
-      # the ref of the commit referenced by the event, e.g 'refs/heads/develop', from GITHUB_REF
+      # the ref of the commit referenced by the event, e.g 'refs/heads/develop'
       ref: string
-      # the owner of the GitHub repo the event applies to, e.g. `DistruApp`, from GITHUB_REPO
+      # the owner of the GitHub repo the event applies to, e.g. `DistruApp`
       owner: string
-      # the GitHub repo the event applies to, e.g. `distru`, from GITHUB_REPO
+      # the GitHub repo the event applies to, e.g. `distru`
       repo: string
+      # if the event is a pull request, provides convenient access to some PR metadata
+      pull_request:
+        # the PR number
+        number: number
+        # the SHA hash of the head ref
+        head_sha: string
+        # the head ref
+        head_ref: string
+        # the SHA hash of the base ref
+        base_sha: string
+        # the base ref
+        base_ref: string
+
 
     # node's `require` function
     require: function
