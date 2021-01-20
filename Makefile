@@ -1,6 +1,6 @@
 .PHONY: help test test-full shell setup-buildx build clean rebuild release node
 
-IMAGE_NAME ?= gcr.io/distru-core-services/github/octokit
+IMAGE_NAME ?= gcr.io/distru-core-services/github-script
 
 help:
 	@echo "$(IMAGE_NAME):latest"
